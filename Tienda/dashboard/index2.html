@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.js" integrity="sha512-5m2r+g00HDHnhXQDbRLAfZBwPpPCaK+wPLV6lm8VQ+09ilGdHfXV7IVyKPkLOTfi4vTTUVJnz7ELs7cA87/GMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<title>Document</title>
+</head>
+<body>
+	<canvas id="myChart" width="200" height="200"></canvas>
+</body>
+<script type="text/javascript">
+	var ctx= document.getElementById("myChart").getContext("2d");
+	var myChart=new Chart(ctx,{
+		type:"pie",
+		data:{
+			labels:['col1', 'col2', 'col3'],
+			datasets:[{
+				label:'Num datos',
+				data:[10, 9, 15],
+				backgroundColor:[
+					'rgb(66, 134, 244)',
+					'rgb(66, 134, 72)',
+					'rgb(66, 134, 50)',
+				]
+			}]
+		},
+		options:{
+			scales:{
+				yAxes:[{
+					ticks:{
+						beginAtZero:true
+					}
+				}]
+			}
+		}
+	});
+</script>
+</html>

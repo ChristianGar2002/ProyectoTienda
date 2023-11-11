@@ -1,0 +1,11 @@
+.form-group2::before{
+  font-family: "Font Awesome\ 5 Free";
+  position: absolute;
+  left: 28px;
+  font-size: 22px;
+  padding-top: 4px;
+}
+
+.form-group#name-group::before{
+  content: "\f2bd";
+}
